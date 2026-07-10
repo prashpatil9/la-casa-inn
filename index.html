@@ -615,6 +615,18 @@ main {
   background: var(--cream);
   text-align: center;
 }
+.ig-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px; height: 46px;
+  margin-bottom: 14px;
+  color: #3e3028;
+  transition: color .2s, transform .2s;
+}
+.ig-glyph svg { width: 34px; height: 34px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+.ig-glyph:hover { color: #c8553a; transform: scale(1.08); }
+
 #instagram .s-eyebrow { margin-bottom: 8px; }
 #instagram .s-h2 { margin-bottom: 36px; }
 
@@ -1068,6 +1080,9 @@ footer {
 
   <!-- INSTAGRAM -->
   <section id="instagram">
+    <a href="https://www.instagram.com/lacasainnpasadena/" target="_blank" class="ig-glyph reveal" aria-label="La Casa Inn on Instagram">
+      <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor" stroke="none"/></svg>
+    </a>
     <div class="s-eyebrow reveal">We're on Instagram</div>
     <h2 class="s-h2 reveal">See the latest from @lacasainnpasadena</h2>
     <div class="ig-grid">
