@@ -1368,10 +1368,12 @@ html.acc-noanim *, html.acc-noanim *::before, html.acc-noanim *::after {
    ROSE BOWL
 ───────────────────────────────────── */
 #rosebowl {
-  background: linear-gradient(180deg, #f9efec 0%, #f6e7e4 100%);
+  background: linear-gradient(180deg, #f0dcd7 0%, #e9cec7 100%);
   padding: 96px 56px;
+  margin-top: 64px;
   text-align: center;
   border-top: 3px solid #b3223b;
+  box-shadow: inset 0 18px 30px -22px rgba(62,48,40,0.25);
 }
 .rb-inner { max-width: 1000px; margin: 0 auto; }
 .rb-rose {
@@ -1417,8 +1419,8 @@ html.acc-noanim *, html.acc-noanim *::before, html.acc-noanim *::after {
   gap: 60px;
   flex-wrap: wrap;
   padding: 26px 0;
-  border-top: 1px solid rgba(179,34,59,0.25);
-  border-bottom: 1px solid rgba(179,34,59,0.25);
+  border-top: 1px solid rgba(179,34,59,0.35);
+  border-bottom: 1px solid rgba(179,34,59,0.35);
 }
 .rbe-name {
   font-family: 'Cormorant Garamond', serif;
@@ -1671,7 +1673,7 @@ html.acc-noanim *, html.acc-noanim *::before, html.acc-noanim *::after {
             </div>
           </div>
         </div>
-        <div class="room-action"><a href="#prefooter" class="btn-book">Book Now</a></div>
+        <div class="room-action"><a href="#prefooter" class="btn-book" data-roomid="77426">Book Now</a></div>
       </div>
 
       <div class="room-row r2 reveal">
@@ -1695,7 +1697,7 @@ html.acc-noanim *, html.acc-noanim *::before, html.acc-noanim *::after {
             </div>
           </div>
         </div>
-        <div class="room-action"><a href="#prefooter" class="btn-book">Book Now</a></div>
+        <div class="room-action"><a href="#prefooter" class="btn-book" data-roomid="47552">Book Now</a></div>
       </div>
 
     </div>
@@ -1768,7 +1770,7 @@ html.acc-noanim *, html.acc-noanim *::before, html.acc-noanim *::after {
     <p class="s-body reveal">Discover Pasadena's hidden gems and local wonders — from historic streets and lush gardens to iconic landmarks, all within minutes of La Casa Inn.</p>
 
     <div class="exp-grid">
-      <a href="#" class="exp-card reveal">
+      <a href="https://maps.google.com/?q=Old+Town+Pasadena" target="_blank" class="exp-card reveal">
         <div class="exp-bg"></div>
         <div class="exp-overlay"></div>
         <div class="exp-body">
@@ -1777,7 +1779,7 @@ html.acc-noanim *, html.acc-noanim *::before, html.acc-noanim *::after {
           <span class="exp-dist">5 min walk</span>
         </div>
       </a>
-      <a href="#" class="exp-card reveal d1">
+      <a href="https://maps.google.com/?q=Rose+Bowl+Stadium+Pasadena" target="_blank" class="exp-card reveal d1">
         <div class="exp-bg"></div>
         <div class="exp-overlay"></div>
         <div class="exp-body">
@@ -1786,7 +1788,7 @@ html.acc-noanim *, html.acc-noanim *::before, html.acc-noanim *::after {
           <span class="exp-dist">10 min drive</span>
         </div>
       </a>
-      <a href="#" class="exp-card reveal d2">
+      <a href="https://maps.google.com/?q=The+Huntington+Library+San+Marino" target="_blank" class="exp-card reveal d2">
         <div class="exp-bg"></div>
         <div class="exp-overlay"></div>
         <div class="exp-body">
@@ -2202,6 +2204,15 @@ document.querySelectorAll('.sb-drop').forEach(function(t){
   }, { passive: true });
   update();
 })();
+</script>
+
+<script>
+document.querySelectorAll('[data-roomid]').forEach(function(b){
+  b.addEventListener('click', function(){
+    var sel = document.getElementById('txtRoomId');
+    if (sel) sel.value = b.getAttribute('data-roomid');
+  });
+});
 </script>
 </body>
 </html>
